@@ -30,13 +30,25 @@ const Mainpage = () => {
   return (
     <div className='w-full h-screen  '>
 
-        <div className= ' w-[600px] mx-auto bg-zinc-300 rounded flex mt-2 p-2 gap-2 '>
+<div className="w-full max-w-[600px] mx-auto bg-zinc-300 rounded flex flex-col sm:flex-row mt-2 p-2 gap-2">
+  
 
-            {/* input me on change isliye lga rhe taki jab bhi ham kuch search kre vo api me jake search ho jaye */}
-            <input onChange={HandleInput} className='w-full p-1 border-green-500' type="text" placeholder='Enter Dishe' />
+  <input 
+    onChange={HandleInput} 
+    className="w-full p-2 border border-green-500 rounded" 
+    type="text" 
+    placeholder="Enter Dish" 
+  />
 
-            <button onClick={myFun} className='bg-green-700 px-3 py-1 p-1 rounded hover:bg-green-500 hover:text-white'>Search</button>
-        </div>
+ 
+  <button 
+    onClick={myFun} 
+    className="bg-green-700 px-4 py-2 rounded hover:bg-green-500 hover:text-white w-full sm:w-auto"
+  >
+    Search
+  </button>
+</div>
+
         <div className=''>
             {/* jsonData.meals ko hamne data me store kiya tha or use ab MealCards me Prop kr diya */}
             <MealCards details={Data}/>
